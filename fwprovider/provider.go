@@ -31,6 +31,7 @@ import (
 	"github.com/bpg/terraform-provider-proxmox/fwprovider/cluster/ha"
 	"github.com/bpg/terraform-provider-proxmox/fwprovider/cluster/hardwaremapping"
 	"github.com/bpg/terraform-provider-proxmox/fwprovider/cluster/metrics"
+	"github.com/bpg/terraform-provider-proxmox/fwprovider/cluster/notifications"
 	"github.com/bpg/terraform-provider-proxmox/fwprovider/cluster/options"
 	"github.com/bpg/terraform-provider-proxmox/fwprovider/cluster/replication"
 	sdnapplier "github.com/bpg/terraform-provider-proxmox/fwprovider/cluster/sdn/applier"
@@ -599,6 +600,8 @@ func (p *proxmoxProvider) Resources(_ context.Context) []func() resource.Resourc
 		hardwaremapping.NewUSBResourceShort, // proxmox_hardware_mapping_usb
 		metrics.NewMetricsServerResource,
 		metrics.NewMetricsServerShortResource,
+		notifications.NewSendmailEndpointResource,
+		notifications.NewMatcherResource,
 		network.NewLinuxBondResource,
 		network.NewLinuxBridgeResource,
 		network.NewShortLinuxBridgeResource,
@@ -703,6 +706,9 @@ func (p *proxmoxProvider) DataSources(_ context.Context) []func() datasource.Dat
 		hardwaremapping.NewUSBDataSourceShort, // proxmox_hardware_mapping_usb
 		metrics.NewMetricsServerDatasource,
 		metrics.NewMetricsServerShortDatasource,
+		notifications.NewSendmailEndpointDatasource,
+		notifications.NewMatcherDatasource,
+		notifications.NewTargetsDatasource,
 		file.NewFileDataSource,
 		file.NewShortFileDataSource,
 		file.NewListDataSource,

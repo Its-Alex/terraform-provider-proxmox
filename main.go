@@ -73,6 +73,9 @@ import (
 //go:generate cp ./build/docs-gen/data-sources/virtual_environment_haresources.md ./docs/data-sources/
 //go:generate cp ./build/docs-gen/data-sources/metrics_server.md ./docs/data-sources/
 //go:generate cp ./build/docs-gen/data-sources/virtual_environment_metrics_server.md ./docs/data-sources/
+//go:generate cp ./build/docs-gen/data-sources/notification_endpoint_sendmail.md ./docs/data-sources/
+//go:generate cp ./build/docs-gen/data-sources/notification_matcher.md ./docs/data-sources/
+//go:generate cp ./build/docs-gen/data-sources/notification_targets.md ./docs/data-sources/
 //go:generate cp ./build/docs-gen/data-sources/virtual_environment_node.md ./docs/data-sources/
 //go:generate cp ./build/docs-gen/data-sources/virtual_environment_nodes.md ./docs/data-sources/
 //go:generate cp ./build/docs-gen/data-sources/replication.md ./docs/data-sources/
@@ -149,6 +152,8 @@ import (
 //go:generate cp ./build/docs-gen/resources/virtual_environment_harule.md ./docs/resources/
 //go:generate cp ./build/docs-gen/resources/metrics_server.md ./docs/resources/
 //go:generate cp ./build/docs-gen/resources/virtual_environment_metrics_server.md ./docs/resources/
+//go:generate cp ./build/docs-gen/resources/notification_endpoint_sendmail.md ./docs/resources/
+//go:generate cp ./build/docs-gen/resources/notification_matcher.md ./docs/resources/
 //go:generate cp ./build/docs-gen/resources/network_linux_bond.md ./docs/resources/
 //go:generate cp ./build/docs-gen/resources/virtual_environment_network_linux_bridge.md ./docs/resources/
 //go:generate cp ./build/docs-gen/resources/network_linux_bridge.md ./docs/resources/
